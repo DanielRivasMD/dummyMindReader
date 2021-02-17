@@ -1,0 +1,13 @@
+name = "dummyMindReader"
+uuid = "637f0d35-e40c-4378-bfd1-3765cb936d9b"
+authors = ["DanielRivasMD <danielrivasmd@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
