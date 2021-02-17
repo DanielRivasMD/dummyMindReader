@@ -1,0 +1,6 @@
+green, 100456
+blue, 3534
+red, 21456
+turquoise, 43645
+black, 8969
+white, 56389
