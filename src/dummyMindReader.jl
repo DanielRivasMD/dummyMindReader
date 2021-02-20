@@ -7,8 +7,8 @@ module dummyMindReader
 #  imports
 begin
   using CairoMakie, AbstractPlotting # plotting packages
-  using CSV, DataFrames  # file manipulation
-  using ArgParse         # arg parser
+  using CSV, DataFrames              # file manipulation
+  using ArgParse                     # arg parser
 end
 
 ################################################################################
