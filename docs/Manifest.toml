@@ -17,6 +17,9 @@ deps = ["LinearAlgebra"]
 git-tree-sha1 = "ffcfa2d345aaee0ef3d8346a073d5dd03c983ebe"
 uuid = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
 version = "3.2.0"
+git-tree-sha1 = "345a14764e43fe927d6f5c250fe4c8e4664e6ee8"
+uuid = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
+version = "2.4.0"
 
 [[Animations]]
 deps = ["Colors"]
@@ -163,10 +166,10 @@ uuid = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 version = "0.22.5"
 
 [[DataStructures]]
-deps = ["InteractiveUtils", "OrderedCollections"]
-git-tree-sha1 = "88d48e133e6d3dd68183309877eac74393daa7eb"
+deps = ["Compat", "InteractiveUtils", "OrderedCollections"]
+git-tree-sha1 = "4437b64df1e0adccc3e5d1adbc3ac741095e4677"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
-version = "0.17.20"
+version = "0.18.9"
 
 [[DataValueInterfaces]]
 git-tree-sha1 = "bfc1187b79289637fa0ef6d4436ebdfe6905cbd6"
@@ -801,6 +804,10 @@ deps = ["DataAPI", "Tables"]
 git-tree-sha1 = "ad1f5fd155426dcc879ec6ede9f74eb3a2d582df"
 uuid = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
 version = "0.4.2"
+deps = ["Adapt", "DataAPI", "Tables"]
+git-tree-sha1 = "8099ed9fb90b6e754d6ba8c6ed8670f010eadca0"
+uuid = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
+version = "0.4.4"
 
 [[StructTypes]]
 deps = ["Dates", "UUIDs"]
