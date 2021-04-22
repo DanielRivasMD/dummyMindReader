@@ -12,10 +12,10 @@ DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 
 [compat]
 AbstractPlotting = "0.15"
-CSV = "0.8"
 ArgParse = "1.1"
-DataFrames = "0.22"
+CSV = "0.8"
 CairoMakie = "0.3"
+DataFrames = "0.22, 1.0"
 julia = "1"
 
 [extras]
