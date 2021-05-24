@@ -1,6 +1,6 @@
-module dummyMindReader
+################################################################################
 
-#  Write your package code here.
+module dummyMindReader
 
 ################################################################################
 
@@ -10,6 +10,11 @@ begin
   using CSV, DataFrames              # file manipulation
   using ArgParse                     # arg parser
 end
+
+################################################################################
+
+export shArgParser
+export mindReader
 
 ################################################################################
 
@@ -31,27 +36,21 @@ function shArgParser(args)
   return parsed_args
 end
 
-################################################################################
+function mindReader(file, output)
 
-#  parse shell arguments
-shArgs = shArgParser(ARGS)
+  #  read file
+  df = CSV.File(file, header = false) |> DataFrame
 
-begin
-  file = shArgs["file"]
-  output = shArgs["output"]
+  #  plot
+  scene = barplot(df[:, 2], color = :red, strokecolor = :black, strokewidth = 1)
+
+  #  save plot
+  save(output, scene, pt_per_unit = 0.5)
+
 end
-
-################################################################################
-
-#  read file
-df = CSV.File(file, header = false) |> DataFrame
-
-#  plot
-scene = barplot(df[:, 2], color = :red, strokecolor = :black, strokewidth = 1)
-
-#  save plot
-save(output, scene, pt_per_unit = 0.5)
 
 ################################################################################
 
 end
+
+################################################################################
