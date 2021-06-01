@@ -6,9 +6,9 @@ module dummyMindReader
 
 #  imports
 begin
-  using CairoMakie, AbstractPlotting # plotting packages
-  using CSV, DataFrames              # file manipulation
-  using ArgParse                     # arg parser
+  using Plots           # plotting packages
+  using CSV, DataFrames # file manipulation
+  using ArgParse        # arg parser
 end
 
 ################################################################################
@@ -42,10 +42,10 @@ function mindReader(file, output)
   df = CSV.File(file, header = false) |> DataFrame
 
   #  plot
-  scene = CairoMakie.barplot(df[:, 2], color = :red, strokecolor = :black, strokewidth = 1)
+  p = plot(df[:, 2] .^ 7)
 
   #  save plot
-  CairoMakie.save(output, scene, pt_per_unit = 0.5)
+  savefig(p, output)
 
 end
 
