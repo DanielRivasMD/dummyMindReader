@@ -42,10 +42,10 @@ function mindReader(file, output)
   df = CSV.File(file, header = false) |> DataFrame
 
   #  plot
-  scene = barplot(df[:, 2], color = :red, strokecolor = :black, strokewidth = 1)
+  scene = CairoMakie.barplot(df[:, 2], color = :red, strokecolor = :black, strokewidth = 1)
 
   #  save plot
-  save(output, scene, pt_per_unit = 0.5)
+  CairoMakie.save(output, scene, pt_per_unit = 0.5)
 
 end
 
